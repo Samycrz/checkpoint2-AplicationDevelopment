@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #050505;
+    color: #e0e0e0;
+    padding: 32px;
+}
+
+h1 {
+    margin: 0 0 32px 0;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 12px;
+    display: inline-block;
+}
+
+.controles {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 32px;
+}
+
+.busca {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 14px 16px;
+    border: 1px solid #333333;
+    border-radius: 0;
+    background-color: #111111;
+    color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.busca:focus {
+    border-color: #ffffff;
+}
+
+.busca::placeholder {
+    color: #666666;
+}
+
+.grid-atores {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+}
+
+.ator {
+    background-color: #0a0a0a;
+    border: 1px solid #222222;
+    border-radius: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.ator:hover {
+    transform: translateY(-6px);
+    border-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
+}
+
+.ator img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    filter: grayscale(40%);
+    /* Deixa as imagens levemente apagadas */
+    transition: filter 0.3s ease;
+}
+
+.ator:hover img {
+    filter: grayscale(0%);
+    /* Restaura a cor no hover */
+}
+
+.ator .info {
+    padding: 16px;
+    border-top: 1px solid #222222;
+}
+
+.ator h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 10px 0;
+    color: #ffffff;
+}
+
+.ator p {
+    font-size: 12px;
+    color: #888888;
+    margin: 4px 0 0 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.ator p strong {
+    color: #bbbbbb;
+}
